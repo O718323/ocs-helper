@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>OCS 网课助手 · 自建安装页</title>
+<style>
+  :root {
+    --ink: #0f172a;
+    --muted: #64748b;
+    --line: #e2e8f0;
+    --bg: #f8fafc;
+    --accent: #0f766e;
+    --accent-dark: #115e59;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    line-height: 1.7;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 56px 24px 72px; }
+  .badge {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: .08em;
+    color: var(--accent-dark);
+    background: #ccfbf1;
+    border-radius: 999px;
+    padding: 3px 10px;
+    margin-bottom: 18px;
+  }
+  h1 { font-size: 32px; margin: 0 0 10px; letter-spacing: -.02em; }
+  .lead { color: var(--muted); margin: 0 0 32px; font-size: 15px; }
+  .lead a { color: var(--accent-dark); }
+  .card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 28px;
+    margin-bottom: 22px;
+  }
+  .install {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 14px 26px;
+    border-radius: 10px;
+    font-size: 16px;
+  }
+  .install:hover { background: var(--accent-dark); }
+  .hint { color: var(--muted); font-size: 13px; margin: 14px 0 0; }
+  h2 { font-size: 17px; margin: 0 0 14px; }
+  ol { margin: 0; padding-left: 22px; }
+  ol li { margin-bottom: 10px; font-size: 15px; }
+  code {
+    background: #f1f5f9;
+    border-radius: 5px;
+    padding: 2px 6px;
+    font-size: 13px;
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+  }
+  .platforms { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+  .platforms li {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 13px;
+    color: #334155;
+    background: #f8fafc;
+  }
+  footer { color: var(--muted); font-size: 12px; margin-top: 32px; }
+  footer a { color: var(--accent-dark); }
+  .meta { font-size: 12px; color: var(--muted); margin-top: 10px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="badge">SELF-HOSTED · GITHUB PAGES</span>
+  <h1>OCS 网课助手</h1>
+  <p class="lead">
+    本页由你自己的仓库通过 GitHub Actions 从源码构建并发布，脚本来源为
+    <a href="https://github.com/ocsjs/ocsjs">ocsjs/ocsjs</a>（MIT 协议）。
+  </p>
+
+  <div class="card">
+    <a class="install" href="./ocs.user.js">安装脚本（v5.4.2）</a>
+    <p class="hint">
+      点击后浏览器会交给脚本管理器处理安装。若没有任何反应，说明还没装管理器，请先完成下面第一步。
+    </p>
+    <p class="meta">更新检测地址：<code>ocs.meta.js</code></p>
+  </div>
+
+  <div class="card">
+    <h2>安装步骤</h2>
+    <ol>
+      <li>在 Chrome / Edge 安装脚本管理器：<a href="https://scriptcat.org/zh-CN/">ScriptCat</a> 或 Tampermonkey（篡改猴）。</li>
+      <li>回到本页，点上面的「安装脚本」，在管理器的安装确认页点「安装」。</li>
+      <li>打开网课平台（超星学习通、智慧树、职教云等）并登录，页面右下角会出现 OCS 悬浮窗。</li>
+      <li>进入视频或作业页面，脚本会自动开始运行；题库等配置在悬浮窗的教程与设置里。</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>已适配平台</h2>
+    <ul class="platforms">
+      <li>超星学习通</li>
+      <li>知到 · 智慧树</li>
+      <li>职教云</li>
+      <li>智慧职教</li>
+      <li>中国大学 MOOC</li>
+      <li>雨课堂</li>
+    </ul>
+  </div>
+
+  <footer>
+    脚本版本 5.4.2 · 构建自 <a href="https://github.com/ocsjs/ocsjs">ocsjs/ocsjs</a> main 分支 ·
+    官方文档 <a href="https://docs.ocsjs.com">docs.ocsjs.com</a><br />
+    仅供个人学习研究使用，请遵守所在学校与平台的规则。
+  </footer>
+</div>
+</body>
+</html>
